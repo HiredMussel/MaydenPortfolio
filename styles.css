@@ -64,10 +64,10 @@ nav p {
 
 /* This section has a background image whose position will remain fixed relative to the rest of the elements on the page */
 
-/* debug div to test background image */
+/* debug div to test behaviour when scrolling */
 main {
 	height: 2000px;
 	
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 }
