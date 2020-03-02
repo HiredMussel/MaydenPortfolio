@@ -24,7 +24,9 @@ nav {
 	height: auto;
 	width: 100%;
 	
+	/* navbar is black and slightly transparent, creating a "smoky glass" effect which I like */
 	background-color: #000000;
+	opacity: 0.7;
 	
 	margin: 0;
 	
