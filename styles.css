@@ -45,7 +45,6 @@
 		height: auto;
 		width: 100%;
 	
-	/* 	navbar is black and slightly transparent, creating a "smoky glass" effect which I like */
 		background-color: #000000;
 	/* 	having transparency too high makes the navbar hard to read due to other content directly underneath it */
 		opacity: 0.9;
@@ -124,6 +123,7 @@
 
 
 /* Callout */
+	/* 	Callout is styled as white text against the background image itself. */
 
 	.callout {
 		color: #EEEEEE;
@@ -162,7 +162,7 @@
 			font-size: 0.8em;
 		}
 	}
-
+ 
 	@media only screen and (max-width: 63rem) {
 		.callout {
 			font-size: 0.6em;
@@ -176,6 +176,7 @@
 	}
 
 /* Main Section */
+	/* Primary colour scheme here is black text on a slightly-transparent grey background */
 
 	main .container {
 		background-color: rgba(240, 240, 240, 0.6);
@@ -220,7 +221,7 @@
 	}
 	
 	
-	/* In order for the link to align properly with the navbar, there needs to be some spacing above the section */
+	/* 	In order for the link to align properly with the navbar, there needs to be some spacing above the section */
 	
 	/* 	On small screens, moving the image to a new line improves readaibility substantially */
 	
