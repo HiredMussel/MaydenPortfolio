@@ -186,8 +186,7 @@
 	/* Default Styling */
 
 	section {
-		padding: 3em 5em;
-		padding-top: 0em;
+		padding: 0 5em;
 	}
 
 	main h1 {
