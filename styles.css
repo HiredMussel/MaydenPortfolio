@@ -74,9 +74,9 @@ nav p {
 	float: right;
 }
 
-	/* 	Starting at roughly 720px or 72em in this case, the navbar at the top of the screen overflows. Solution is to
+	/* 	Starting at roughly 720px or 45rem in this case, the navbar at the top of the screen overflows. Solution is to
 		have the navigation buttons center themselves and the name on the left disappear */
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 45rem) {
 	nav {
 		text-align: center;
 	}
@@ -88,6 +88,13 @@ nav p {
 	
 	nav p {
 		display: none;
+	}
+}
+
+	/* Navbar overflows again on very small screens. Add another breakpoint to scale the font size at 550px or 35rem */
+@media only screen and (max-width: 35rem) {
+	nav {
+		font-size: 0.8em;
 	}
 }
 
@@ -146,6 +153,8 @@ nav a:hover {
 	
 	margin-bottom: 0;
 }
+
+	/* Container text will need to be resized at various points */
 
 /* Main Section */
 
