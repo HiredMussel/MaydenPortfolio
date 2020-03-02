@@ -1,0 +1,24 @@
+/* Basic Body styling */
+body {
+	margin: 0;
+	padding: 0;
+	
+	/* Set basic text size. 62.5% is chosen since browsers default to 16px, so can set up font sizes in em easily by dividing px size by 10 */
+	font-size: 62.5%;
+	
+	/* Set up background image */
+	background-image: url('images/BGImage.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+/* Main Section */
+
+/* This section has a background image whose position will remain fixed relative to the rest of the elements on the page */
+
+/* debug div to test background image */
+main {
+	height: 2000px;
+}
