@@ -189,6 +189,7 @@
 
 	section {
 		padding: 3em 5em;
+		padding-top: 0em;
 	}
 
 	main h1 {
@@ -196,25 +197,39 @@
 	}
 
 	main p {
-		font-size: 1.6em;
+		font-size: 1.4em;
+	}
+	
+	/*	Extra spacing at the top to account for navbar */
+	#aboutMe {
+		height: 5.4em;
+		margin: 0;
+		padding: 0;
 	}
 	
 	/* 	Styling for the "about me" section. This section consists of a header at the top, followed by an image and a paragraph.
 		The image and paragraph are intended to sit on the same line */
-	#aboutMe {
-		overflow: auto;
+	
+	.aboutMe img {
+		display: inline-block;
+		width: 240px;
 	}
 	
-	#aboutMe img {
-		float: left;
-		width: 29%;
+	.aboutMe p {
+		display: inline;
 	}
 	
-	#aboutMe div {
-		width: 70%;
-		float: right;
-	}
+	/* In order for the link to align properly with the navbar, there needs to be some spacing above the section */
 	
+	/* 	On Screens of a width less than 1150px, overflow takes place. At this point, the paragraph moves to a new line. As such, there
+	is no point leaving 30% of the container width unused */
+	
+	@media only screen and (max-width:1150px) {
+		/* At low screen sizes, the text is squashed against the side. At this point it should appear on its own line */
+		.aboutMe p{
+			display: inline-block;
+		}
+	}
 	
 	
 
