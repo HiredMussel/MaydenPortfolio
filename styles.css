@@ -4,7 +4,8 @@ body {
 	margin: 0;
 	padding: 0;
 	
-	/* Set basic text size. 62.5% is chosen since browsers default to 16px, so can set up font sizes in em easily by dividing px size by 10 */
+	/*	Set basic text size. 62.5% is chosen since browsers default to 16px, so can set up font sizes in em easily by dividing px size by 10
+		Fallback font family is Sans-Serif*/
 	font-size: 62.5%;
 	font-family: Sans-Serif;
 	
@@ -16,7 +17,7 @@ body {
 	background-attachment: fixed;
 }
 
-/* define fonts */
+	/* define fonts */
 
 h1 {
 	font-family: Arial;
@@ -26,15 +27,15 @@ p {
 	font-family: Helvetica;
 }
 
-/* container element is styled here. This is included for the sake of horizontally aligning the Callout with the main section */
+	/* container element is styled here. This is included for the sake of horizontally aligning the Callout with the main section */
 .container {
 	width: 80%;
 	margin: 0 auto;
 }
 
 /* Navigation Bar */
-/* 	The Navigation bar is formatted as grey text on a black background with a subtle "smoked glass" transparency effect. Mousing over 
-	the links will cause the text on them to turn white */
+	/* 	The Navigation bar is formatted as grey text on a black background with a subtle "smoked glass" transparency effect. Mousing over 
+		the links will cause the text on them to turn white */
 nav {
 	/* 	navbar's position is fixed on the page - needs to always be attached to top. This requires manual resizing to display correctly */
 	position: fixed;
@@ -46,7 +47,8 @@ nav {
 	
 	/* navbar is black and slightly transparent, creating a "smoky glass" effect which I like */
 	background-color: #000000;
-	opacity: 0.7;
+	/* having transparency too high makes the navbar hard to read due to other content directly underneath it */
+	opacity: 0.9;
 	
 	margin: 0;
 	
@@ -64,6 +66,7 @@ nav p {
 	margin-bottom: 0;
 }
 
+	/* Float navigation links over to the right */
 .navLinks {
 	margin-top: 1.8em;
 	
@@ -71,7 +74,24 @@ nav p {
 	float: right;
 }
 
-/* Dummy navbar needs to have the same height as the full navbar to occupy its position at the "top" of the page */
+	/* 	Starting at roughly 720px or 72em in this case, the navbar at the top of the screen overflows. Solution is to
+		have the navigation buttons center themselves and the name on the left disappear */
+@media only screen and (max-width: 720px) {
+	nav {
+		text-align: center;
+	}
+	
+	.navLinks {
+		float: none;
+		margin: 1.8em auto;
+	}
+	
+	nav p {
+		display: none;
+	}
+}
+
+	/* Dummy navbar needs to have the same height as the full navbar to occupy its position at the "top" of the page */
 .navbarDummy {
 	display: block;
 	
@@ -79,7 +99,7 @@ nav p {
 	height: 5.4em;
 }
 
-/* Font styling for elements in the navbar */
+	/* Font styling for elements in the navbar */
 nav a,
 nav p {
 	color: #AEAEAE;
@@ -89,7 +109,7 @@ nav p {
 	text-decoration: none;
 }
 
-/* Define behaviour of navbar links on hover */
+	/* Define behaviour of navbar links on hover. Links will turn white and become Bold-Faced */
 nav a:hover {
 	color: #FFFFFF;
 	font-weight: 800;
@@ -99,7 +119,6 @@ nav a:hover {
 
 /* Callout */
 
-/* Initial callout to draw attention */
 .callout {
 	color: #EEEEEE;
 	margin: 5em auto;
@@ -118,7 +137,7 @@ nav a:hover {
 }
 
 
-/* Container2 class keeps the text in the central callout centred at less with than the webpage as a whole */
+	/* Container2 class keeps the text in the central callout centred at width less with than the webpage as a whole */
 .container2 {
 	font-size: 5em;
 	
