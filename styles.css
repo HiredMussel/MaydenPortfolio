@@ -154,7 +154,27 @@ nav a:hover {
 	margin-bottom: 0;
 }
 
-	/* Container text will need to be resized at various points */
+	/* 	Container text will need to be resized at various points. Roughly speaking (assuming default browser font size)
+		the following breakpoints correspond to 1250px, 1000px and 770px. At 0.4em, the font on the screen seems to be small
+		enough that it looks correct down to 500px*/
+	
+@media only screen and (max-width: 78rem) {
+	.callout {
+		font-size: 0.8em;
+	}
+}
+
+@media only screen and (max-width: 63rem) {
+	.callout {
+		font-size: 0.6em;
+	}
+}
+
+@media only screen and (max-width: 49rem) {
+	.callout {
+		font-size: 0.4em;
+	}
+}
 
 /* Main Section */
 
