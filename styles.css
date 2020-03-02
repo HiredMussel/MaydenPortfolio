@@ -52,8 +52,7 @@
 	
 		margin: 0;
 	
-	/* 	Stricty speaking the following is unnecessary, as the navbar is able to detect its size due to the name element on the left of it.
-		This is included in case of future decisions making it necessary */
+	/* 	Navbar contains floated elements, and at certain screen widths will contain only floated elements */
 		overflow: auto;
 
 	}
@@ -201,5 +200,7 @@
 /* Footer */
 	/* 	Style the footer as a basic legal disclaimer */
 	footer {
-		
+		color: #FFFFFF;
+		background-color: #222222;
+		padding: 0.5em;
 	}
