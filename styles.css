@@ -1,199 +1,205 @@
-/* Basic Body styling */
-body {
+/* Baseline Styling */
+	body {
 	/* 	Eliminate white space around edge of page */
-	margin: 0;
-	padding: 0;
+		margin: 0;
+		padding: 0;
 	
 	/*	Set basic text size. 62.5% is chosen since browsers default to 16px, so can set up font sizes in em easily by dividing px size by 10
 		Fallback font family is Sans-Serif*/
-	font-size: 62.5%;
-	font-family: Sans-Serif;
+		font-size: 62.5%;
+		font-family: Sans-Serif;
 	
 	/* 	Set up background image */
-	background-image: url('images/BGImage.png');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;
-}
+		background-image: url('images/BGImage.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+	}
 
 	/* define fonts */
 
-h1 {
-	font-family: Arial;
-}
+	h1 {
+		font-family: Arial;
+	}
 
-p {
-	font-family: Helvetica;
-}
+	p {
+		font-family: Helvetica;
+	}
 
 	/* 	container element is styled here. This is included for the sake of horizontally aligning the Callout with the main section */
-.container {
-	width: 80%;
-	margin: 0 auto;
-}
+	.container {
+		width: 80%;
+		margin: 0 auto;
+	}
 
 /* Navigation Bar */
 	/* 	The Navigation bar is formatted as grey text on a black background with a subtle "smoked glass" transparency effect. Mousing over 
 		the links will cause the text on them to turn white */
-nav {
+	nav {
 	/* 	navbar's position is fixed on the page - needs to always be attached to top. This requires manual resizing to display correctly */
-	position: fixed;
-	top: 0;
-	z-index: 5;
+		position: fixed;
+		top: 0;
+		z-index: 5;
 	
-	height: auto;
-	width: 100%;
+		height: auto;
+		width: 100%;
 	
 	/* 	navbar is black and slightly transparent, creating a "smoky glass" effect which I like */
-	background-color: #000000;
+		background-color: #000000;
 	/* 	having transparency too high makes the navbar hard to read due to other content directly underneath it */
-	opacity: 0.9;
+		opacity: 0.9;
 	
-	margin: 0;
+		margin: 0;
 	
 	/* 	Stricty speaking the following is unnecessary, as the navbar is able to detect its size due to the name element on the left of it.
 		This is included in case of future decisions making it necessary */
-	overflow: auto;
+		overflow: auto;
 
-}
+	}
 
-nav p {
-	display: inline-block;
+	nav p {
+		display: inline-block;
 	
 	/* 	Eliminate pre-styled margin on "p" to avoid gap at top of screen */
-	margin-top: 0;
-	margin-bottom: 0;
-}
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 
 	/* 	Float navigation links over to the right */
-.navLinks {
-	margin-top: 1.8em;
+	.navLinks {
+		margin-top: 1.8em;
 	
-	display: inline-block;
-	float: right;
-}
+		display: inline-block;
+		float: right;
+	}
 
 	/* 	Starting at roughly 720px or 45rem in this case, the navbar at the top of the screen overflows. Solution is to
 		have the navigation buttons center themselves and the name on the left disappear */
-@media only screen and (max-width: 45rem) {
-	nav {
-		text-align: center;
-	}
+	@media only screen and (max-width: 45rem) {
+		nav {
+			text-align: center;
+		}
 	
-	.navLinks {
-		float: none;
-		margin: 1.8em auto;
-	}
+		.navLinks {
+			float: none;
+			margin: 1.8em auto;
+		}
 	
-	nav p {
-		display: none;
+		nav p {
+			display: none;
+		}
 	}
-}
 
 	/* 	Navbar overflows again on very small screens. Add another breakpoint to scale the font size at 550px or 35rem */
-@media only screen and (max-width: 35rem) {
-	nav {
-		font-size: 0.8em;
+	@media only screen and (max-width: 35rem) {
+		nav {
+			font-size: 0.8em;
+		}
 	}
-}
 
 	/* 	Dummy navbar needs to have the same height as the full navbar to occupy its position at the "top" of the page */
-.navbarDummy {
-	display: block;
+	.navbarDummy {
+		display: block;
 	
-	width: 100%;
-	height: 5.4em;
-}
+		width: 100%;
+		height: 5.4em;
+	}
 
 	/* 	Font styling for elements in the navbar */
-nav a,
-nav p {
-	color: #AEAEAE;
-	font-size: 1.8em;
-	padding: 1em;
-	
-	text-decoration: none;
-}
+	nav a,
+	nav p {
+		color: #AEAEAE;
+		font-size: 1.8em;
+		padding: 1em;
+
+		text-decoration: none;
+	}
 
 	/* 	Define behaviour of navbar links on hover. Links will turn white and become Bold-Faced */
-nav a:hover {
-	color: #FFFFFF;
-	font-weight: 800;
-}
+	nav a:hover {
+		color: #FFFFFF;
+		font-weight: 800;
+	}
 
 
 
 /* Callout */
 
-.callout {
-	color: #EEEEEE;
-	margin: 5em auto;
+	.callout {
+		color: #EEEEEE;
+		margin: 5em auto;
 
-}
+	}
 
-.callout .container {
-	height: auto;
-	padding-bottom: 12em;
-	margin-bottom: 0;
-}
+	.callout .container {
+		height: auto;
+		padding-bottom: 12em;
+		margin-bottom: 0;
+	}
 
-.callout h1 {
-	font-size: 9em;
-	padding-bottom: 0;
-}
+	.callout h1 {
+		font-size: 9em;
+		padding-bottom: 0;
+	}
 
 
 	/* 	Container2 class keeps the text in the central callout centred at width less with than the webpage as a whole */
-.container2 {
-	font-size: 5em;
+	.container2 {
+		font-size: 5em;
 	
-	width: 18em;
-	margin: 0 auto;
+		width: 18em;
+		margin: 0 auto;
 	
-	margin-bottom: 0;
-}
+		margin-bottom: 0;
+	}
 
 	/* 	Container text will need to be resized at various points. Roughly speaking (assuming default browser font size)
 		the following breakpoints correspond to 1250px, 1000px and 770px. At 0.4em, the font on the screen seems to be small
 		enough that it looks correct down to 500px*/
 	
-@media only screen and (max-width: 78rem) {
-	.callout {
-		font-size: 0.8em;
+	@media only screen and (max-width: 78rem) {
+		.callout {
+			font-size: 0.8em;
+		}
 	}
-}
 
-@media only screen and (max-width: 63rem) {
-	.callout {
-		font-size: 0.6em;
+	@media only screen and (max-width: 63rem) {
+		.callout {
+			font-size: 0.6em;
+		}
 	}
-}
 
-@media only screen and (max-width: 49rem) {
-	.callout {
-		font-size: 0.4em;
+	@media only screen and (max-width: 49rem) {
+		.callout {
+			font-size: 0.4em;
+		}
 	}
-}
 
 /* Main Section */
 
-main .container {
-	background-color: #EEEEEE;
-	border: 2px solid #000000;
-	opacity: 0.6;
+	main .container {
+		background-color: #EEEEEE;
+		border: 2px solid #000000;
+		opacity: 0.6;
 
-	margin: 3em auto;
-}
+		margin: 3em auto;
+	}
 
-section {
-	padding: 3em 5em;
-}
+	section {
+		padding: 3em 5em;
+	}
 
-main h1 {
-	font-size: 2.4em;
-}
+	main h1 {
+		font-size: 2.4em;
+	}
 
-main p {
-	font-size: 1.6em;
-}
+	main p {
+		font-size: 1.6em;
+	}
+
+/* Footer */
+	/* 	Style the footer as a basic legal disclaimer */
+	footer {
+		
+	}
