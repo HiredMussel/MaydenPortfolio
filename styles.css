@@ -185,6 +185,8 @@
 		margin: 3em auto;
 	}
 
+	/* Default Styling */
+
 	section {
 		padding: 3em 5em;
 	}
@@ -196,6 +198,25 @@
 	main p {
 		font-size: 1.6em;
 	}
+	
+	/* 	Styling for the "about me" section. This section consists of a header at the top, followed by an image and a paragraph.
+		The image and paragraph are intended to sit on the same line */
+	#aboutMe {
+		overflow: auto;
+	}
+	
+	#aboutMe img {
+		float: left;
+		width: 29%;
+	}
+	
+	#aboutMe div {
+		width: 70%;
+		float: right;
+	}
+	
+	
+	
 
 /* Footer */
 	/* 	Style the footer as a basic legal disclaimer */
