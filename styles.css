@@ -1,6 +1,6 @@
 /* Basic Body styling */
 body {
-	/* Eliminate white space around edge of page */
+	/* 	Eliminate white space around edge of page */
 	margin: 0;
 	padding: 0;
 	
@@ -9,7 +9,7 @@ body {
 	font-size: 62.5%;
 	font-family: Sans-Serif;
 	
-	/* Set up background image */
+	/* 	Set up background image */
 	background-image: url('images/BGImage.png');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -27,7 +27,7 @@ p {
 	font-family: Helvetica;
 }
 
-	/* container element is styled here. This is included for the sake of horizontally aligning the Callout with the main section */
+	/* 	container element is styled here. This is included for the sake of horizontally aligning the Callout with the main section */
 .container {
 	width: 80%;
 	margin: 0 auto;
@@ -45,9 +45,9 @@ nav {
 	height: auto;
 	width: 100%;
 	
-	/* navbar is black and slightly transparent, creating a "smoky glass" effect which I like */
+	/* 	navbar is black and slightly transparent, creating a "smoky glass" effect which I like */
 	background-color: #000000;
-	/* having transparency too high makes the navbar hard to read due to other content directly underneath it */
+	/* 	having transparency too high makes the navbar hard to read due to other content directly underneath it */
 	opacity: 0.9;
 	
 	margin: 0;
@@ -61,12 +61,12 @@ nav {
 nav p {
 	display: inline-block;
 	
-	/* Eliminate pre-styled margin on "p" to avoid gap at top of screen */
+	/* 	Eliminate pre-styled margin on "p" to avoid gap at top of screen */
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
-	/* Float navigation links over to the right */
+	/* 	Float navigation links over to the right */
 .navLinks {
 	margin-top: 1.8em;
 	
@@ -91,14 +91,14 @@ nav p {
 	}
 }
 
-	/* Navbar overflows again on very small screens. Add another breakpoint to scale the font size at 550px or 35rem */
+	/* 	Navbar overflows again on very small screens. Add another breakpoint to scale the font size at 550px or 35rem */
 @media only screen and (max-width: 35rem) {
 	nav {
 		font-size: 0.8em;
 	}
 }
 
-	/* Dummy navbar needs to have the same height as the full navbar to occupy its position at the "top" of the page */
+	/* 	Dummy navbar needs to have the same height as the full navbar to occupy its position at the "top" of the page */
 .navbarDummy {
 	display: block;
 	
@@ -106,7 +106,7 @@ nav p {
 	height: 5.4em;
 }
 
-	/* Font styling for elements in the navbar */
+	/* 	Font styling for elements in the navbar */
 nav a,
 nav p {
 	color: #AEAEAE;
@@ -116,7 +116,7 @@ nav p {
 	text-decoration: none;
 }
 
-	/* Define behaviour of navbar links on hover. Links will turn white and become Bold-Faced */
+	/* 	Define behaviour of navbar links on hover. Links will turn white and become Bold-Faced */
 nav a:hover {
 	color: #FFFFFF;
 	font-weight: 800;
@@ -144,7 +144,7 @@ nav a:hover {
 }
 
 
-	/* Container2 class keeps the text in the central callout centred at width less with than the webpage as a whole */
+	/* 	Container2 class keeps the text in the central callout centred at width less with than the webpage as a whole */
 .container2 {
 	font-size: 5em;
 	
