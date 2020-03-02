@@ -60,6 +60,12 @@ nav p {
 	text-decoration: none;
 }
 
+/* Define behaviour of navbar links on hover */
+nav a:hover {
+	color: #FFFFFF;
+	font-weight: 800;
+}
+
 /* Main Section */
 
 /* This section has a background image whose position will remain fixed relative to the rest of the elements on the page */
