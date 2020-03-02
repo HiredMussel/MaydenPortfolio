@@ -5,6 +5,7 @@ body {
 	
 	/* Set basic text size. 62.5% is chosen since browsers default to 16px, so can set up font sizes in em easily by dividing px size by 10 */
 	font-size: 62.5%;
+	font-family: Sans-Serif;
 	
 	/* Set up background image */
 	background-image: url('images/BGImage.png');
@@ -14,6 +15,33 @@ body {
 	background-attachment: fixed;
 }
 
+/* Navigation Bar */
+/* 	The Navigation bar is formatted as grey text on a black background with a subtle "smoked glass" transparency effect. Mousing over 
+	the links will cause the text on them to turn white */
+nav {
+	overflow: auto;
+	
+	background-color: #000000;
+	
+	font-size: 1.8em;
+	color: #AEAEAE;
+	
+	margin: 0;
+}
+
+nav p {
+	display: inline-block;
+	
+	/* Eliminate pre-styled margin on "p" to avoid gap at top of screen */
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.navLinks {
+	display: inline-block;
+	float: right;
+}
+
 /* Main Section */
 
 /* This section has a background image whose position will remain fixed relative to the rest of the elements on the page */
@@ -21,4 +49,7 @@ body {
 /* debug div to test background image */
 main {
 	height: 2000px;
+	
+	margin: 0;
+	padding: 0;
 }
