@@ -16,7 +16,11 @@ body {
 	background-attachment: fixed;
 }
 
-
+/* container element is styled here. This is included for the sake of horizontally aligning the Callout with the main section */
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
 
 /* Navigation Bar */
 /* 	The Navigation bar is formatted as grey text on a black background with a subtle "smoked glass" transparency effect. Mousing over 
@@ -87,7 +91,29 @@ nav a:hover {
 
 /* Initial callout to draw attention */
 .callout {
+	color: #FFFFFF;
 	margin: 5em auto;
+}
+
+.callout h1 {
+	font-family: Arial;
+	font-size: 9em;
+	padding-bottom: 0;
+	margin-bottom: 0.4em;
+}
+
+
+/* Container2 class keeps the text in the central callout centred at less with than the webpage as a whole */
+.container2 {
+	font-size: 5em;
+	
+	width: 18em;
+	margin: 0 auto;
+}
+
+.callout p {
+	font-family: Helvetica;
+
 }
 
 /* Main Section */
