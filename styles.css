@@ -16,6 +16,16 @@ body {
 	background-attachment: fixed;
 }
 
+/* define fonts */
+
+h1 {
+	font-family: Arial;
+}
+
+p {
+	font-family: Helvetica;
+}
+
 /* container element is styled here. This is included for the sake of horizontally aligning the Callout with the main section */
 .container {
 	width: 80%;
@@ -102,13 +112,7 @@ nav a:hover {
 	margin-bottom: 0;
 }
 
-.callout h1,
-.callout p {
-	opacity: 0.9;
-}
-
 .callout h1 {
-	font-family: Arial;
 	font-size: 9em;
 	padding-bottom: 0;
 }
@@ -124,26 +128,24 @@ nav a:hover {
 	margin-bottom: 0;
 }
 
-.callout p {
-	font-family: Helvetica;
-
-}
-
 /* Main Section */
-
-/* debug div to test behaviour when scrolling */
-main {
-	margin-top: 0;
-	padding-top: 0;
-}
 
 main .container {
 	background-color: #EEEEEE;
 	border: 2px solid #000000;
 	opacity: 0.6;
-	
-	height: 2000px;
-	
-	margin: 0 auto;
-	padding: 0;
+
+	margin: 3em auto;
+}
+
+section {
+	padding: 3em 5em;
+}
+
+main h1 {
+	font-size: 2.4em;
+}
+
+main p {
+	font-size: 1.6em;
 }
