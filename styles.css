@@ -19,18 +19,24 @@ body {
 /* 	The Navigation bar is formatted as grey text on a black background with a subtle "smoked glass" transparency effect. Mousing over 
 	the links will cause the text on them to turn white */
 nav {
-	overflow: auto;
+	/* 	navbar's position is fixed on the page - needs to always be attached to top. This requires manual resizing to display correctly */
+	position: fixed;
+	height: auto;
+	width: 100%;
 	
 	background-color: #000000;
 	
-	font-size: 1.8em;
-	color: #AEAEAE;
-	
 	margin: 0;
+	
+	/* 	Stricty speaking the following is unnecessary, as the navbar is able to detect its size due to the name element on the left of it.
+		This is included in case of future decisions making it necessary */
+	overflow: auto;
+
 }
 
 nav p {
 	display: inline-block;
+	
 	
 	/* Eliminate pre-styled margin on "p" to avoid gap at top of screen */
 	margin-top: 0;
@@ -38,8 +44,20 @@ nav p {
 }
 
 .navLinks {
+	margin-top: 1.8em;
+	
 	display: inline-block;
 	float: right;
+}
+
+/* Font styling for elements in the navbar */
+nav a,
+nav p {
+	color: #AEAEAE;
+	font-size: 1.8em;
+	padding: 1em;
+	
+	text-decoration: none;
 }
 
 /* Main Section */
