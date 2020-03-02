@@ -1,5 +1,6 @@
 /* Basic Body styling */
 body {
+	/* Eliminate white space around edge of page */
 	margin: 0;
 	padding: 0;
 	
@@ -14,6 +15,8 @@ body {
 	background-position: center center;
 	background-attachment: fixed;
 }
+
+
 
 /* Navigation Bar */
 /* 	The Navigation bar is formatted as grey text on a black background with a subtle "smoked glass" transparency effect. Mousing over 
@@ -78,14 +81,16 @@ nav a:hover {
 	font-weight: 800;
 }
 
+
+
+/* Callout */
+
 /* Initial callout to draw attention */
 .callout {
 	margin: 5em auto;
 }
 
 /* Main Section */
-
-/* This section has a background image whose position will remain fixed relative to the rest of the elements on the page */
 
 /* debug div to test behaviour when scrolling */
 main {
