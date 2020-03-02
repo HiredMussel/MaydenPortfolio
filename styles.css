@@ -20,11 +20,11 @@
 	/* define fonts */
 
 	h1 {
-		font-family: Arial;
+		font-family: Arial, Helvetica, Sans-Serif;
 	}
 
 	p {
-		font-family: Helvetica;
+		font-family: "Trebuchet MS", Helvetica, Sans-Serif;
 	}
 
 	/* 	container element is styled here. This is included for the sake of horizontally aligning the Callout with the main section */
