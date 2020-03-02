@@ -21,6 +21,8 @@ body {
 nav {
 	/* 	navbar's position is fixed on the page - needs to always be attached to top. This requires manual resizing to display correctly */
 	position: fixed;
+	top: 0;
+	
 	height: auto;
 	width: 100%;
 	
@@ -52,6 +54,14 @@ nav p {
 	float: right;
 }
 
+/* Dummy navbar needs to have the same height as the full navbar to occupy its position at the "top" of the page */
+.navbarDummy {
+	display: block;
+	
+	width: 100%;
+	height: 5.4em;
+}
+
 /* Font styling for elements in the navbar */
 nav a,
 nav p {
@@ -66,6 +76,11 @@ nav p {
 nav a:hover {
 	color: #FFFFFF;
 	font-weight: 800;
+}
+
+/* Initial callout to draw attention */
+.callout {
+	margin: 5em auto;
 }
 
 /* Main Section */
