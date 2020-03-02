@@ -29,6 +29,7 @@ nav {
 	/* 	navbar's position is fixed on the page - needs to always be attached to top. This requires manual resizing to display correctly */
 	position: fixed;
 	top: 0;
+	z-index: 5;
 	
 	height: auto;
 	width: 100%;
@@ -47,7 +48,6 @@ nav {
 
 nav p {
 	display: inline-block;
-	
 	
 	/* Eliminate pre-styled margin on "p" to avoid gap at top of screen */
 	margin-top: 0;
@@ -91,15 +91,27 @@ nav a:hover {
 
 /* Initial callout to draw attention */
 .callout {
-	color: #FFFFFF;
+	color: #EEEEEE;
 	margin: 5em auto;
+
+}
+
+.callout .container {
+	background-color: rgba(0, 0, 0, 0.6);
+	height: auto;
+	padding-bottom: 12em;
+	margin-bottom: 0;
+}
+
+.callout h1,
+.callout p {
+	opacity: 0.9;
 }
 
 .callout h1 {
 	font-family: Arial;
 	font-size: 9em;
 	padding-bottom: 0;
-	margin-bottom: 0.4em;
 }
 
 
@@ -109,6 +121,8 @@ nav a:hover {
 	
 	width: 18em;
 	margin: 0 auto;
+	
+	margin-bottom: 0;
 }
 
 .callout p {
@@ -120,6 +134,15 @@ nav a:hover {
 
 /* debug div to test behaviour when scrolling */
 main {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+main .container {
+	background-color: #EEEEEE;
+	border: 2px solid #000000;
+	opacity: 0.6;
+	
 	height: 2000px;
 	
 	margin: 0 auto;
