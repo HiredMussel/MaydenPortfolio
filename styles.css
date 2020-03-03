@@ -334,6 +334,13 @@
 	.contactIcon {
 		height: 10em;
 		width: auto;
+		
+		opacity: 0.6;
+	}
+	
+	.contactIcon:hover {
+		opacity: 1;
+		transition: 0.4s;
 	}
 	
 
