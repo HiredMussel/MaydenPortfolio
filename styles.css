@@ -54,7 +54,7 @@
 		margin: 0;
 	
 	/* 	Navbar contains floated elements, and at certain screen widths will contain only floated elements */
-		overflow: auto;
+		overflow: hidden;
 
 	}
 
@@ -134,7 +134,7 @@
 	}
 
 	.navLinksMob {
-		display: inline-block;
+		display: none;
 		position: absolute;
 		top: 5.4em;
 	}
