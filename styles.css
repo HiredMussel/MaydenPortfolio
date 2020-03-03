@@ -329,12 +329,16 @@
 		justify-content: space-around;
 		padding-bottom: 5em;
 		margin-bottom: 0;
+		width: 100%;
+	}
+	
+	.contactContent a {
+		width: 32%;
 	}
 	
 	.contactIcon {
-		height: 10em;
-		width: auto;
-		
+		width: 100%;
+		height: auto;
 		opacity: 0.6;
 	}
 	
@@ -442,11 +446,6 @@
 		/*	Main section becomes aligned off-centre vertically due to fixed padding at this breakpont. Switch to %-based */
 		section {
 			padding: 0 5%;
-		}
-		
-		/*	Contact Icons need to be resized at this point so that they don't run into each other */
-		.contactIcon {
-			max-width: 32%;
-			height: auto;
+			width: 90%;
 		}
 	}
