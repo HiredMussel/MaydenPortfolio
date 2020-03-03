@@ -128,9 +128,8 @@
 			display: block;
 		}
 		
-		.mobLink {
+		nav .mobLink {
 			display: block;
-			padding: 1em auto;
 		}
 		
 		nav:hover,
@@ -143,7 +142,7 @@
 	/*	Styling for the navbar in "mobile mode" */
 	
 	#navDropMenu,
-	.navLinksMob {
+	.mobLink {
 		display: none;
 	}
 
@@ -163,12 +162,6 @@
 
 		padding: 3px;
 		transform: rotate(45deg);
-	}
-
-	.navLinksMob {
-		display: none;
-		position: absolute;
-		top: 5.4em;
 	}
 
 
