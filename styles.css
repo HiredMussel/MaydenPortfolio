@@ -108,39 +108,6 @@
 		float: right;
 	}
 
-	/* 	Starting at roughly 720px, the navbar at the top of the screen overflows. Solution is to
-		have the navigation buttons center themselves and the name on the left disappear */
-	@media only screen and (max-width: 770px) {
-		nav {
-			text-align: left;
-			overflow:hidden;
-		}
-
-		nav .navLinks {
-			display: none;
-		}
-
-		nav p {
-			display: none;
-		}
-		
-		/* At this point, the navigation bar at the top switches to a drop-down menu */
-		
-		nav #navDropMenu {
-			display: block;
-		}
-		
-		nav .mobLink {
-			display: block;
-		}
-		
-		nav:hover,
-		nav:active {
-			height: 28em;
-			transition: 0.3s;
-		}
-	}
-
 	/*	Styling for the navbar in "mobile mode" */
 	
 	#navDropMenu,
@@ -226,29 +193,9 @@
 	
 		margin-bottom: 0;
 	}
+	
 
-	/* 	Container text will need to be resized at various points. Roughly speaking (assuming default browser font size)
-		the following breakpoints correspond to 1250px, 1000px and 770px. At 0.4em, the font on the screen seems to be small
-		enough that it looks correct down to 500px*/
 	
-	/*	iPad's screen width is 768px, so switch to mobile mode at 750px */
-	
-	@media only screen and (max-width: 750px) {
-		.callout {
-			font-size: 0.8em;
-		}
-		
-		.container2 {
-			padding-top: 0;
-		}
-	}
-	
-	/*	Font needs to become even smaller on extremely small screens */
-	@media only screen and (max-width: 420px) {
-		.callout {
-			font-size: 0.6em;
-		}
-	}
 	
 /* Main Section */
 	/* Primary colour scheme here is black text on a slightly-transparent grey background */
@@ -295,19 +242,6 @@
 		
 		margin:1em;
 		margin-top: 0;
-	}
-	
-	
-	/* 	In order for the link to align properly with the navbar, there needs to be some spacing above the section */
-	
-	/* 	On small screens, moving the image to a new line improves readaibility substantially */
-	
-	@media only screen and (max-width:700px) {
-		.aboutMeContent img{
-			float: none;
-			display: block;
-			margin: 2em auto;
-		}
 	}
 
 /* Showcase Section */
@@ -393,4 +327,71 @@
 		color: #FFFFFF;
 		background-color: #222222;
 		padding: 0.5em;
+	}
+	
+/*	Media breakpoints */
+			/*	iPad's screen width is 768px, so switch to mobile mode at 750px */
+	
+	@media only screen and (max-width: 750px) {
+		
+		/* 	Starting at roughly 720px, the navbar at the top of the screen overflows. Solution is to
+			have the navigation buttons center themselves and the name on the left disappear */
+		nav {
+			text-align: left;
+			overflow:hidden;
+		}
+
+		nav .navLinks {
+			display: none;
+		}
+
+		nav p {
+			display: none;
+		}
+		
+		/* At this point, the navigation bar at the top switches to a drop-down menu */
+		
+		nav #navDropMenu {
+			display: block;
+		}
+		
+		nav .mobLink {
+			display: block;
+		}
+		
+		nav:hover,
+		nav:active {
+			height: 28em;
+			transition: 0.3s;
+		}
+		
+		/* 	Container text will need to be resized at various points. Roughly speaking (assuming default browser font size)
+			the following breakpoints correspond to 1250px, 1000px and 770px. At 0.4em, the font on the screen seems to be small
+			enough that it looks correct down to 500px*/
+		
+		.callout {
+			font-size: 0.8em;
+		}
+		
+		.container2 {
+			padding-top: 0;
+		}
+		
+		/* 	In order for the link to align properly with the navbar, there needs to be some spacing above the section */
+	
+		/* 	On small screens, moving the image to a new line improves readaibility substantially */
+		
+		.aboutMeContent img{
+			float: none;
+			display: block;
+			margin: 2em auto;
+		}
+	}
+	
+	@media only screen and (max-width: 420px) {
+		/*	Font needs to become even smaller on extremely small screens */
+		
+		.callout {
+			font-size: 0.6em;
+		}
 	}
