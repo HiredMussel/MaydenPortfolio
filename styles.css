@@ -4,7 +4,7 @@
 		margin: 0;
 		padding: 0;
 		
-		width: 100%;
+		width: screen-width;
 	
 	/*	Set basic text size. 62.5% is chosen since browsers default to 16px, so can set up font sizes in em easily by dividing px size by 10
 		Fallback font family is Sans-Serif*/
@@ -33,6 +33,38 @@
 	.container {
 		width: 80%;
 		margin: 0 auto;
+	}
+
+/* Scrollbar */
+	/*	Formatting for the scrollbar on webkit-based browsers */
+	
+	::-webkit-scrollbar {
+		width: 10px;
+		position: fixed;
+	}
+	
+	/* Track */
+	::-webkit-scrollbar-track {
+	  background: #000000; 
+	}
+ 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	  background: #AEAEAE; 
+	  opacity: 0.6;
+	  background-clip: content-box;
+	  border: 2px solid transparent;
+	  border-radius: 6px;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+  	  background: #DEDEDE; 
+  	  opacity: 0.6;
+  	  background-clip: content-box;
+  	  border: 1px solid transparent;
+  	  border-radius: 8px;
+	  transition: 0.5s;
 	}
 
 /* Navigation Bar */
