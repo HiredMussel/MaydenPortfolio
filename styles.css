@@ -206,6 +206,7 @@
 		background-color: rgba(240, 240, 240, 0.6);
 
 		margin: 3em auto;
+		margin-bottom: 0;
 		
 		width: 120em;
 	}
@@ -326,7 +327,8 @@
 	.contactContent {
 		display: flex;
 		justify-content: space-around;
-		align-items: center;
+		padding-bottom: 5em;
+		margin-bottom: 0;
 	}
 	
 	.contactIcon {
@@ -433,5 +435,11 @@
 		/*	Main section becomes aligned off-centre vertically due to fixed padding at this breakpont. Switch to %-based */
 		section {
 			padding: 0 5%;
+		}
+		
+		/*	Contact Icons need to be resized at this point so that they don't run into each other */
+		.contactIcon {
+			max-width: 32%;
+			height: auto;
 		}
 	}
