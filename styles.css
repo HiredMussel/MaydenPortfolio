@@ -331,6 +331,12 @@
 		padding: 0.5em;
 	}
 	
+	footer a {
+		color: #FFFFFF;
+		background-color: #222222;
+		padding: 0.5em;
+	}
+	
 /*	Media breakpoints */
 	
 	
