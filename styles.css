@@ -44,7 +44,7 @@
 		top: 0;
 		z-index: 5;
 	
-		height: auto;
+		height: 5.4em;
 		width: 100%;
 	
 		background-color: #000000;
@@ -76,9 +76,10 @@
 
 	/* 	Starting at roughly 720px, the navbar at the top of the screen overflows. Solution is to
 		have the navigation buttons center themselves and the name on the left disappear */
-	@media only screen and (max-width: 720px) {
+	@media only screen and (max-width: 770px) {
 		nav {
-			text-align: center;
+			text-align: left;
+			overflow:hidden;
 		}
 
 		nav .navLinks {
@@ -89,8 +90,21 @@
 			display: none;
 		}
 		
+		/* At this point, the navigation bar at the top switches to a drop-down menu */
+		
 		nav #navDropMenu {
 			display: block;
+		}
+		
+		.mobLink {
+			display: block;
+			padding: 1em auto;
+		}
+		
+		nav:hover,
+		nav:active {
+			height: 28em;
+			transition: 0.3s;
 		}
 	}
 
@@ -117,6 +131,12 @@
 
 		padding: 3px;
 		transform: rotate(45deg);
+	}
+
+	.navLinksMob {
+		display: inline-block;
+		position: absolute;
+		top: 5.4em;
 	}
 
 
@@ -197,9 +217,9 @@
 	}
 	
 	/*	Font needs to become even smaller on extremely small screens */
-	@media only screen and (max-width: 350px) {
+	@media only screen and (max-width: 420px) {
 		.callout {
-			font-size: 0.8em;
+			font-size: 0.6em;
 		}
 	}
 	
