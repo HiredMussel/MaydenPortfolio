@@ -134,9 +134,9 @@
 	}
 
 	.callout .container {
-		height: auto;
-		padding-bottom: 13em;
-		margin-bottom: 2em;
+		height: 100vh;
+		padding: 0;
+		margin: 0 auto;
 	}
 
 	.callout h1 {
@@ -147,9 +147,11 @@
 
 	/* 	Container2 class keeps the text in the central callout centred at width less with than the webpage as a whole */
 	.container2 {
+		padding-top: 20vh;
+		
 		font-size: 5em;
 	
-		width: 18em;
+		width: min(18em, 100%);
 		margin: 0 auto;
 	
 		margin-bottom: 0;
@@ -159,24 +161,18 @@
 		the following breakpoints correspond to 1250px, 1000px and 770px. At 0.4em, the font on the screen seems to be small
 		enough that it looks correct down to 500px*/
 	
-	@media only screen and (max-width: 78rem) {
+	/*	iPad's screen width is 768px, so switch to mobile mode at 750px */
+	
+	@media only screen and (max-width: 750px) {
 		.callout {
 			font-size: 0.8em;
 		}
-	}
- 
-	@media only screen and (max-width: 63rem) {
-		.callout {
-			font-size: 0.6em;
+		
+		.container2 {
+			padding-top: 0;
 		}
 	}
-
-	@media only screen and (max-width: 49rem) {
-		.callout {
-			font-size: 0.4em;
-		}
-	}
-
+	
 /* Main Section */
 	/* Primary colour scheme here is black text on a slightly-transparent grey background */
 
