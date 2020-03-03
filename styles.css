@@ -81,22 +81,44 @@
 			text-align: center;
 		}
 
-		.navLinks {
-			float: none;
-			margin: 1.8em auto;
+		nav .navLinks {
+			display: none;
 		}
 
 		nav p {
 			display: none;
 		}
-	}
-
-	/* 	Navbar overflows again on very small screens. Add another breakpoint to scale the font size at 550px */
-	@media only screen and (max-width: 550px) {
-		nav {
-			font-size: 0.8em;
+		
+		nav #navDropMenu {
+			display: block;
 		}
 	}
+
+	/*	Styling for the navbar in "mobile mode" */
+	
+	#navDropMenu,
+	.navLinksMob {
+		display: none;
+	}
+
+	#navDropMenu {
+		text-align: left;
+		
+		margin: 0;
+		padding: 1em;
+	}
+
+	.downArrow {
+		float: right;
+		display: inline-block;
+		
+		border: solid #AEAEAE;
+		border-width: 0 3px 3px 0;
+
+		padding: 3px;
+		transform: rotate(45deg);
+	}
+
 
 	/* 	Dummy navbar needs to have the same height as the full navbar to occupy its position at the "top" of the page */
 	.navbarDummy {
@@ -107,6 +129,7 @@
 	}
 
 	/* 	Font styling for elements in the navbar */
+	nav h1,
 	nav a,
 	nav p {
 		color: #AEAEAE;
@@ -174,9 +197,9 @@
 	}
 	
 	/*	Font needs to become even smaller on extremely small screens */
-	@media only screen and (max-width: 370px) {
+	@media only screen and (max-width: 350px) {
 		.callout {
-			font-size: 0.6em;
+			font-size: 0.8em;
 		}
 	}
 	
