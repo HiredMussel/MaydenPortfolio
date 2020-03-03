@@ -3,6 +3,8 @@
 	/* 	Eliminate white space around edge of page */
 		margin: 0;
 		padding: 0;
+		
+		width: 100%;
 	
 	/*	Set basic text size. 62.5% is chosen since browsers default to 16px, so can set up font sizes in em easily by dividing px size by 10
 		Fallback font family is Sans-Serif*/
@@ -72,9 +74,9 @@
 		float: right;
 	}
 
-	/* 	Starting at roughly 720px or 45rem in this case, the navbar at the top of the screen overflows. Solution is to
+	/* 	Starting at roughly 720px, the navbar at the top of the screen overflows. Solution is to
 		have the navigation buttons center themselves and the name on the left disappear */
-	@media only screen and (max-width: 45rem) {
+	@media only screen and (max-width: 720px) {
 		nav {
 			text-align: center;
 		}
@@ -89,8 +91,8 @@
 		}
 	}
 
-	/* 	Navbar overflows again on very small screens. Add another breakpoint to scale the font size at 550px or 35rem */
-	@media only screen and (max-width: 35rem) {
+	/* 	Navbar overflows again on very small screens. Add another breakpoint to scale the font size at 550px */
+	@media only screen and (max-width: 550px) {
 		nav {
 			font-size: 0.8em;
 		}
