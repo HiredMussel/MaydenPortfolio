@@ -206,6 +206,7 @@
 		background-color: rgba(240, 240, 240, 0.6);
 
 		margin: 3em auto;
+		margin-bottom: 0;
 		
 		width: 120em;
 	}
@@ -321,11 +322,41 @@
 		transition: 0.5s;
 	}
 	
+/*	Contact Details */
+	/* This section will contain an email address, phone number and linkedin profile */
+	.contactContent {
+		display: flex;
+		justify-content: space-around;
+		padding-bottom: 5em;
+		margin-bottom: 0;
+		width: 100%;
+	}
+	
+	.contactContent a {
+		width: 32%;
+	}
+	
+	.contactIcon {
+		width: 100%;
+		height: auto;
+		opacity: 0.6;
+	}
+	
+	.contactIcon:hover {
+		opacity: 1;
+		transition: 0.4s;
+	}
 	
 
 /* Footer */
 	/* 	Style the footer as a basic legal disclaimer */
 	footer {
+		color: #FFFFFF;
+		background-color: #222222;
+		padding: 0.5em;
+	}
+	
+	footer a {
 		color: #FFFFFF;
 		background-color: #222222;
 		padding: 0.5em;
@@ -415,5 +446,6 @@
 		/*	Main section becomes aligned off-centre vertically due to fixed padding at this breakpont. Switch to %-based */
 		section {
 			padding: 0 5%;
+			width: 90%;
 		}
 	}
