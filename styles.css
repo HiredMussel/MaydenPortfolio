@@ -321,6 +321,18 @@
 		transition: 0.5s;
 	}
 	
+/*	Contact Details */
+	/* This section will contain an email address, phone number and linkedin profile */
+	.contactContent {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	
+	.contactIcon {
+		height: 10em;
+		width: auto;
+	}
 	
 
 /* Footer */
