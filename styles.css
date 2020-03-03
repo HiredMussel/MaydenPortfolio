@@ -5,8 +5,6 @@
 	/* 	Eliminate white space around edge of page */
 		margin: 0;
 		padding: 0;
-		
-		width: screen-width;
 	
 	/*	Set basic text size. 62.5% is chosen since browsers default to 16px, so can set up font sizes in em easily by dividing px size by 10
 		Fallback font family is Sans-Serif*/
@@ -19,6 +17,10 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-attachment: fixed;
+		
+	/*	It seems unlikely that a user will access this website on a screen smaller than 300px, but the layout
+		breaks down at sizes smaller than about 260px */
+		min-width: 260px;
 	}
 
 	/* define fonts */
@@ -188,7 +190,7 @@
 		
 		font-size: 5em;
 	
-		width: min(18em, 100%);
+		width: 18em;
 		margin: 0 auto;
 	
 		margin-bottom: 0;
@@ -205,13 +207,13 @@
 
 		margin: 3em auto;
 		
-		width: min(1200px, 100%);
+		width: 120em;
 	}
 
 	/* Default Styling */
 
 	section {
-		padding: 0 min(5em,5%);
+		padding: 0 5em;
 	}
 
 	main h1 {
@@ -330,7 +332,22 @@
 	}
 	
 /*	Media breakpoints */
-			/*	iPad's screen width is 768px, so switch to mobile mode at 750px */
+	
+	
+	@media only screen and (max-width: 1200px) {
+		/*	Few changes necessary on tablets, but container width could do with being allowed to extend to 100% to prevent
+			unnecessary font wrapping making the screen hard to read */
+		main .container {
+			width: 100%;
+		}
+		
+		/*	Callout will also start wrapping after this point, so should switch to percentage-based width */
+		.container2 {
+			width: 100%;
+		}
+	}
+	
+	/*	iPad's screen width is 768px, so switch to mobile mode at 750px */
 	
 	@media only screen and (max-width: 750px) {
 		
@@ -393,5 +410,10 @@
 		
 		.callout {
 			font-size: 0.6em;
+		}
+		
+		/*	Main section becomes aligned off-centre vertically due to fixed padding at this breakpont. Switch to %-based */
+		section {
+			padding: 0 5%;
 		}
 	}
