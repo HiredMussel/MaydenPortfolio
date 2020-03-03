@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* Baseline Styling */
 	body {
 	/* 	Eliminate white space around edge of page */
@@ -15,6 +17,10 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-attachment: fixed;
+		
+	/*	It seems unlikely that a user will access this website on a screen smaller than 300px, but the layout
+		breaks down at sizes smaller than about 260px */
+		min-width: 260px;
 	}
 
 	/* define fonts */
@@ -33,6 +39,38 @@
 		margin: 0 auto;
 	}
 
+/* Scrollbar */
+	/*	Formatting for the scrollbar on webkit-based browsers */
+	
+	::-webkit-scrollbar {
+		width: 10px;
+		position: fixed;
+	}
+	
+	/* Track */
+	::-webkit-scrollbar-track {
+	  background: #000000; 
+	}
+ 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	  background: #AEAEAE; 
+	  opacity: 0.6;
+	  background-clip: content-box;
+	  border: 2px solid transparent;
+	  border-radius: 6px;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+  	  background: #DEDEDE; 
+  	  opacity: 0.6;
+  	  background-clip: content-box;
+  	  border: 1px solid transparent;
+  	  border-radius: 8px;
+	  transition: 0.5s;
+	}
+
 /* Navigation Bar */
 	/* 	The Navigation bar is formatted as grey text on a black background with a subtle "smoked glass" transparency effect. Mousing over 
 		the links will cause the text on them to turn white */
@@ -42,7 +80,7 @@
 		top: 0;
 		z-index: 5;
 	
-		height: auto;
+		height: 5.4em;
 		width: 100%;
 	
 		background-color: #000000;
@@ -52,7 +90,7 @@
 		margin: 0;
 	
 	/* 	Navbar contains floated elements, and at certain screen widths will contain only floated elements */
-		overflow: auto;
+		overflow: hidden;
 
 	}
 
@@ -72,29 +110,31 @@
 		float: right;
 	}
 
-	/* 	Starting at roughly 720px or 45rem in this case, the navbar at the top of the screen overflows. Solution is to
-		have the navigation buttons center themselves and the name on the left disappear */
-	@media only screen and (max-width: 45rem) {
-		nav {
-			text-align: center;
-		}
-
-		.navLinks {
-			float: none;
-			margin: 1.8em auto;
-		}
-
-		nav p {
-			display: none;
-		}
+	/*	Styling for the navbar in "mobile mode" */
+	
+	#navDropMenu,
+	.mobLink {
+		display: none;
 	}
 
-	/* 	Navbar overflows again on very small screens. Add another breakpoint to scale the font size at 550px or 35rem */
-	@media only screen and (max-width: 35rem) {
-		nav {
-			font-size: 0.8em;
-		}
+	#navDropMenu {
+		text-align: left;
+		
+		margin: 0;
+		padding: 1em;
 	}
+
+	.downArrow {
+		float: right;
+		display: inline-block;
+		
+		border: solid #AEAEAE;
+		border-width: 0 3px 3px 0;
+
+		padding: 3px;
+		transform: rotate(45deg);
+	}
+
 
 	/* 	Dummy navbar needs to have the same height as the full navbar to occupy its position at the "top" of the page */
 	.navbarDummy {
@@ -105,6 +145,7 @@
 	}
 
 	/* 	Font styling for elements in the navbar */
+	nav h1,
 	nav a,
 	nav p {
 		color: #AEAEAE;
@@ -132,9 +173,9 @@
 	}
 
 	.callout .container {
-		height: auto;
-		padding-bottom: 13em;
-		margin-bottom: 2em;
+		height: 100vh;
+		padding: 0;
+		margin: 0 auto;
 	}
 
 	.callout h1 {
@@ -145,6 +186,8 @@
 
 	/* 	Container2 class keeps the text in the central callout centred at width less with than the webpage as a whole */
 	.container2 {
+		padding-top: 20vh;
+		
 		font-size: 5em;
 	
 		width: 18em;
@@ -152,29 +195,10 @@
 	
 		margin-bottom: 0;
 	}
-
-	/* 	Container text will need to be resized at various points. Roughly speaking (assuming default browser font size)
-		the following breakpoints correspond to 1250px, 1000px and 770px. At 0.4em, the font on the screen seems to be small
-		enough that it looks correct down to 500px*/
 	
-	@media only screen and (max-width: 78rem) {
-		.callout {
-			font-size: 0.8em;
-		}
-	}
- 
-	@media only screen and (max-width: 63rem) {
-		.callout {
-			font-size: 0.6em;
-		}
-	}
 
-	@media only screen and (max-width: 49rem) {
-		.callout {
-			font-size: 0.4em;
-		}
-	}
-
+	
+	
 /* Main Section */
 	/* Primary colour scheme here is black text on a slightly-transparent grey background */
 
@@ -182,6 +206,8 @@
 		background-color: rgba(240, 240, 240, 0.6);
 
 		margin: 3em auto;
+		
+		width: 120em;
 	}
 
 	/* Default Styling */
@@ -216,20 +242,83 @@
 		float:left;
 		width: 240px;
 		
-		margin: 1em;
+		margin:1em;
 		margin-top: 0;
+	}
+
+/* Showcase Section */
+	/*	Section is a collection of small thumbnails. Mousing over the thumbnail (or tapping it on a mobile device)
+		will bring up a title, a description of the project, and a link to the project itself */
+	
+	.portfolioFlex {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		min-width: 240px;
+	}
+	
+	.projContainer {
+		position: relative;
+		overflow: hidden;
+		
+		height: 342px;
+		width: 240px;
+		
+		margin-top: 2em;
+	}
+	
+	.textBox {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		
+		width: 100%;
+		height: 100%;
+		
+		padding: 1em;
+		
+		background-color: rgba(0, 0, 0, 0.6);
+		
+		color: #FFFFFF;
+		
+		opacity: 0;
+	}
+	
+	.buttonContainer {
+		position: absolute;
+		bottom: 0;
+		left: 50px;
+		right: 50px;
+		
+		text-align: center;
+		
+		padding: 1em;
+		
+		border: 2px solid #AEAEAE;
+		border-radius: 4px;
+		
+		margin: 2em auto;
+		
+		z-index: 2;
+	}
+	
+	.buttonContainer a {
+		color: #AEAEAE;
+		text-decoration: none;
+		font-size: 1.6em;
+	}
+	
+	.buttonContainer:hover {
+		border-color: #FFFFFF;
+		transition: 0.3s;
 	}
 	
 	
-	/* 	In order for the link to align properly with the navbar, there needs to be some spacing above the section */
-	
-	/* 	On small screens, moving the image to a new line improves readaibility substantially */
-	
-	@media only screen and (max-width:700px) {
-		.aboutMeContent img{
-			float: none;
-			display: block;
-		}
+	.textBox:active,
+	.textBox:hover {
+		opacity: 1;
+		transition: 0.5s;
 	}
 	
 	
@@ -240,4 +329,91 @@
 		color: #FFFFFF;
 		background-color: #222222;
 		padding: 0.5em;
+	}
+	
+/*	Media breakpoints */
+	
+	
+	@media only screen and (max-width: 1200px) {
+		/*	Few changes necessary on tablets, but container width could do with being allowed to extend to 100% to prevent
+			unnecessary font wrapping making the screen hard to read */
+		main .container {
+			width: 100%;
+		}
+		
+		/*	Callout will also start wrapping after this point, so should switch to percentage-based width */
+		.container2 {
+			width: 100%;
+		}
+	}
+	
+	/*	iPad's screen width is 768px, so switch to mobile mode at 750px */
+	
+	@media only screen and (max-width: 750px) {
+		
+		/* 	Starting at roughly 720px, the navbar at the top of the screen overflows. Solution is to
+			have the navigation buttons center themselves and the name on the left disappear */
+		nav {
+			text-align: left;
+			overflow:hidden;
+		}
+
+		nav .navLinks {
+			display: none;
+		}
+
+		nav p {
+			display: none;
+		}
+		
+		/* At this point, the navigation bar at the top switches to a drop-down menu */
+		
+		nav #navDropMenu {
+			display: block;
+		}
+		
+		nav .mobLink {
+			display: block;
+		}
+		
+		nav:hover,
+		nav:active {
+			height: 28em;
+			transition: 0.3s;
+		}
+		
+		/* 	Container text will need to be resized at various points. Roughly speaking (assuming default browser font size)
+			the following breakpoints correspond to 1250px, 1000px and 770px. At 0.4em, the font on the screen seems to be small
+			enough that it looks correct down to 500px*/
+		
+		.callout {
+			font-size: 0.8em;
+		}
+		
+		.container2 {
+			padding-top: 0;
+		}
+		
+		/* 	In order for the link to align properly with the navbar, there needs to be some spacing above the section */
+	
+		/* 	On small screens, moving the image to a new line improves readaibility substantially */
+		
+		.aboutMeContent img{
+			float: none;
+			display: block;
+			margin: 2em auto;
+		}
+	}
+	
+	@media only screen and (max-width: 420px) {
+		/*	Font needs to become even smaller on extremely small screens */
+		
+		.callout {
+			font-size: 0.6em;
+		}
+		
+		/*	Main section becomes aligned off-centre vertically due to fixed padding at this breakpont. Switch to %-based */
+		section {
+			padding: 0 5%;
+		}
 	}
