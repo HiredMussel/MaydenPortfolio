@@ -87,10 +87,9 @@
 	/* 	having transparency too high makes the navbar hard to read due to other content directly underneath it */
 		opacity: 0.9;
 	
-		margin: 0;
-	
 	/* 	Navbar contains floated elements, and at certain screen widths will contain only floated elements */
 		overflow: hidden;
+		height: 5.7em;
 
 	}
 
@@ -135,24 +134,28 @@
 		transform: rotate(45deg);
 	}
 
-
-	/* 	Dummy navbar needs to have the same height as the full navbar to occupy its position at the "top" of the page */
-	.navbarDummy {
-		display: block;
-	
-		width: 100%;
-		height: 5.4em;
-	}
-
 	/* 	Font styling for elements in the navbar */
 	nav h1,
 	nav a,
 	nav p {
 		color: #AEAEAE;
 		font-size: 1.8em;
+	}
+	
+	nav h1,
+	nav p {
 		padding: 1em;
-
+	}
+	
+	nav a {
+		text-align: center;
+		padding: 0;
+		padding-top: 0.5em;
+		display: inline-block;
 		text-decoration: none;
+		width: 7.5em;
+		height: 2.5em;
+		overflow: hidden;
 	}
 
 	/* 	Define behaviour of navbar links on hover. Links will turn white and become Bold-Faced */
@@ -162,38 +165,35 @@
 	}
 
 
-
 /* Callout */
 	/* 	Callout is styled as white text against the background image itself. */
 
 	.callout {
 		color: #EEEEEE;
 		margin: 5em auto;
+		margin-top: 10.4em;
 
 	}
 
 	.callout .container {
 		height: 100vh;
 		padding: 0;
-		margin: 0 auto;
 	}
 
 	.callout h1 {
 		font-size: 9em;
-		padding-bottom: 0;
 	}
 
 
-	/* 	Container2 class keeps the text in the central callout centred at width less with than the webpage as a whole */
-	.container2 {
+	/* 	calloutMainText class keeps the text in the central callout centred at width less with than the webpage as a whole */
+	.calloutMainText {
 		padding-top: 20vh;
 		
 		font-size: 5em;
 	
 		width: 18em;
+		
 		margin: 0 auto;
-	
-		margin-bottom: 0;
 	}
 	
 
@@ -239,6 +239,10 @@
 		overflow: auto;
 	}
 	
+	#aboutMe {
+		padding-top: 5.4em
+	}
+	
 	.aboutMeContent img {
 		float:left;
 		width: 240px;
@@ -251,6 +255,10 @@
 	/*	Section is a collection of small thumbnails. Mousing over the thumbnail (or tapping it on a mobile device)
 		will bring up a title, a description of the project, and a link to the project itself */
 	
+	#portfolio {
+		padding-top: 5.4em;
+	}
+	
 	.portfolioFlex {
 		display: flex;
 		justify-content: space-around;
@@ -262,10 +270,11 @@
 		position: relative;
 		overflow: hidden;
 		
-		height: 342px;
-		width: 240px;
-		
 		margin-top: 2em;
+	}
+	
+	.hoverContainer {
+		opacity: 0;
 	}
 	
 	.textBox {
@@ -282,16 +291,14 @@
 		background-color: rgba(0, 0, 0, 0.6);
 		
 		color: #FFFFFF;
-		
-		opacity: 0;
 	}
 	
-	.buttonContainer {
+	.hoverContainer .buttonContainer {
 		position: absolute;
 		bottom: 0;
 		left: 50px;
 		right: 50px;
-		
+
 		text-align: center;
 		
 		padding: 1em;
@@ -304,26 +311,35 @@
 		z-index: 2;
 	}
 	
-	.buttonContainer a {
+	.buttonContainer{
 		color: #AEAEAE;
 		text-decoration: none;
 		font-size: 1.6em;
 	}
 	
+	.buttonContainer p{
+		margin: 0;
+	}
+	
 	.buttonContainer:hover {
 		border-color: #FFFFFF;
+		background-color: #FFFFFF;
+		color: #414141;
 		transition: 0.3s;
 	}
 	
-	
-	.textBox:active,
-	.textBox:hover {
+	.hoverContainer:active,
+	.hoverContainer:hover {
 		opacity: 1;
 		transition: 0.5s;
 	}
 	
 /*	Contact Details */
 	/* This section will contain an email address, phone number and linkedin profile */
+	#contact {
+		margin-top: 5.4em;
+	}
+	
 	.contactContent {
 		display: flex;
 		justify-content: space-around;
@@ -334,6 +350,7 @@
 	
 	.contactContent a {
 		width: 32%;
+		max-width: 100px;
 	}
 	
 	.contactIcon {
@@ -373,7 +390,7 @@
 		}
 		
 		/*	Callout will also start wrapping after this point, so should switch to percentage-based width */
-		.container2 {
+		.calloutMainText {
 			width: 100%;
 		}
 	}
@@ -409,7 +426,7 @@
 		
 		nav:hover,
 		nav:active {
-			height: 28em;
+			height: 27em;
 			transition: 0.3s;
 		}
 		
@@ -421,7 +438,7 @@
 			font-size: 0.8em;
 		}
 		
-		.container2 {
+		.calloutMainText {
 			padding-top: 0;
 		}
 		
