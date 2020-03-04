@@ -88,7 +88,7 @@
 		opacity: 0.9;
 	
 	/* 	Navbar contains floated elements, and at certain screen widths will contain only floated elements */
-		overflow: auto;
+		overflow: hidden;
 		height: 5.7em;
 
 	}
