@@ -1,0 +1,468 @@
+@charset "UTF-8";
+
+/* Baseline Styling */
+	body {
+	/* 	Eliminate white space around edge of page */
+		margin: 0;
+		padding: 0;
+	
+	/*	Set basic text size. 62.5% is chosen since browsers default to 16px, so can set up font sizes in em easily by dividing px size by 10
+		Fallback font family is Sans-Serif*/
+		font-size: 62.5%;
+		font-family: Sans-Serif;
+	
+	/* 	Set up background image */
+		background-image: url('images/BGImage.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		
+	/*	It seems unlikely that a user will access this website on a screen smaller than 300px, but the layout
+		breaks down at sizes smaller than about 260px */
+		min-width: 260px;
+	}
+
+	/* define fonts */
+
+	h1 {
+		font-family: Arial, Helvetica, Sans-Serif;
+	}
+
+	p {
+		font-family: "Trebuchet MS", Helvetica, Sans-Serif;
+	}
+
+	/* 	container element is styled here. This is included for the sake of horizontally aligning the Callout with the main section */
+	.container {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+/* Scrollbar */
+	/*	Formatting for the scrollbar on webkit-based browsers */
+	
+	::-webkit-scrollbar {
+		width: 10px;
+		position: fixed;
+	}
+	
+	/* Track */
+	::-webkit-scrollbar-track {
+	  background: #000000; 
+	}
+ 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	  background: #AEAEAE; 
+	  opacity: 0.6;
+	  background-clip: content-box;
+	  border: 2px solid transparent;
+	  border-radius: 6px;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+  	  background: #DEDEDE; 
+  	  opacity: 0.6;
+  	  background-clip: content-box;
+  	  border: 1px solid transparent;
+  	  border-radius: 8px;
+	  transition: 0.5s;
+	}
+
+/* Navigation Bar */
+	/* 	The Navigation bar is formatted as grey text on a black background with a subtle "smoked glass" transparency effect. Mousing over 
+		the links will cause the text on them to turn white */
+	nav {
+	/* 	navbar's position is fixed on the page - needs to always be attached to top. This requires manual resizing to display correctly */
+		position: fixed;
+		top: 0;
+		z-index: 5;
+	
+		height: 5.4em;
+		width: 100%;
+	
+		background-color: #000000;
+	/* 	having transparency too high makes the navbar hard to read due to other content directly underneath it */
+		opacity: 0.9;
+	
+	/* 	Navbar contains floated elements, and at certain screen widths will contain only floated elements */
+		overflow: hidden;
+		height: 5.7em;
+
+	}
+
+	nav p {
+		display: inline-block;
+	
+	/* 	Eliminate pre-styled margin on "p" to avoid gap at top of screen */
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	/* 	Float navigation links over to the right */
+	.navLinks {
+		margin-top: 1.8em;
+	
+		display: inline-block;
+		float: right;
+	}
+
+	/*	Styling for the navbar in "mobile mode" */
+	
+	#navDropMenu,
+	.mobLink {
+		display: none;
+	}
+
+	#navDropMenu {
+		text-align: left;
+		
+		margin: 0;
+		padding: 1em;
+	}
+
+	.downArrow {
+		float: right;
+		display: inline-block;
+		
+		border: solid #AEAEAE;
+		border-width: 0 3px 3px 0;
+
+		padding: 3px;
+		transform: rotate(45deg);
+	}
+
+	/* 	Font styling for elements in the navbar */
+	nav h1,
+	nav a,
+	nav p {
+		color: #AEAEAE;
+		font-size: 1.8em;
+	}
+	
+	nav h1,
+	nav p {
+		padding: 1em;
+	}
+	
+	nav a {
+		text-align: center;
+		padding: 0;
+		padding-top: 0.5em;
+		display: inline-block;
+		text-decoration: none;
+		width: 7.5em;
+		height: 2.5em;
+		overflow: hidden;
+	}
+
+	/* 	Define behaviour of navbar links on hover. Links will turn white and become Bold-Faced */
+	nav a:hover {
+		color: #FFFFFF;
+		font-weight: 800;
+	}
+
+
+/* Callout */
+	/* 	Callout is styled as white text against the background image itself. */
+
+	.callout {
+		color: #EEEEEE;
+		margin: 5em auto;
+		margin-top: 10.4em;
+
+	}
+
+	.callout .container {
+		height: 100vh;
+		padding: 0;
+	}
+
+	.callout h1 {
+		font-size: 9em;
+	}
+
+
+	/* 	calloutMainText class keeps the text in the central callout centred at width less with than the webpage as a whole */
+	.calloutMainText {
+		padding-top: 20vh;
+		
+		font-size: 5em;
+	
+		width: 18em;
+		
+		margin: 0 auto;
+	}
+	
+
+	
+	
+/* Main Section */
+	/* Primary colour scheme here is black text on a slightly-transparent grey background */
+
+	main .container {
+		background-color: rgba(240, 240, 240, 0.6);
+
+		margin: 3em auto;
+		margin-bottom: 0;
+		
+		width: 120em;
+	}
+
+	/* Default Styling */
+
+	section {
+		padding: 0 5em;
+	}
+
+	main h1 {
+		font-size: 2.4em;
+	}
+
+	main p {
+		font-size: 1.4em;
+	}
+	
+	/*	Extra spacing at the top to account for navbar */
+	.linkDummy {
+		height: 5.4em;
+		margin: 0;
+		padding: 0;
+	}
+	
+	/* 	Styling for the "about me" section. This section consists of a header at the top, followed by an image and a paragraph.
+		The image and paragraph are intended to sit on the same line */
+	
+	.aboutMeContent {
+		overflow: auto;
+	}
+	
+	#aboutMe {
+		padding-top: 5.4em
+	}
+	
+	.aboutMeContent img {
+		float:left;
+		width: 240px;
+		
+		margin:1em;
+		margin-top: 0;
+	}
+
+/* Showcase Section */
+	/*	Section is a collection of small thumbnails. Mousing over the thumbnail (or tapping it on a mobile device)
+		will bring up a title, a description of the project, and a link to the project itself */
+	
+	#portfolio {
+		padding-top: 5.4em;
+	}
+	
+	.portfolioFlex {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		min-width: 240px;
+	}
+	
+	.projContainer {
+		position: relative;
+		overflow: hidden;
+		
+		margin-top: 2em;
+	}
+	
+	.hoverContainer {
+		opacity: 0;
+	}
+	
+	.textBox {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		
+		width: 100%;
+		height: 100%;
+		
+		padding: 1em;
+		
+		background-color: rgba(0, 0, 0, 0.6);
+		
+		color: #FFFFFF;
+	}
+	
+	.hoverContainer .buttonContainer {
+		position: absolute;
+		bottom: 0;
+		left: 50px;
+		right: 50px;
+
+		text-align: center;
+		
+		padding: 1em;
+		
+		border: 2px solid #AEAEAE;
+		border-radius: 4px;
+		
+		margin: 2em auto;
+		
+		z-index: 2;
+	}
+	
+	.buttonContainer{
+		color: #AEAEAE;
+		text-decoration: none;
+		font-size: 1.6em;
+	}
+	
+	.buttonContainer p{
+		margin: 0;
+	}
+	
+	.buttonContainer:hover {
+		border-color: #FFFFFF;
+		background-color: #FFFFFF;
+		color: #414141;
+		transition: 0.3s;
+	}
+	
+	.hoverContainer:active,
+	.hoverContainer:hover {
+		opacity: 1;
+		transition: 0.5s;
+	}
+	
+/*	Contact Details */
+	/* This section will contain an email address, phone number and linkedin profile */
+	#contact {
+		margin-top: 5.4em;
+	}
+	
+	.contactContent {
+		display: flex;
+		justify-content: space-around;
+		padding-bottom: 5em;
+		margin-bottom: 0;
+		width: 100%;
+	}
+	
+	.contactContent a {
+		width: 32%;
+		max-width: 100px;
+	}
+	
+	.contactIcon {
+		width: 100%;
+		height: auto;
+		opacity: 0.6;
+	}
+	
+	.contactIcon:hover {
+		opacity: 1;
+		transition: 0.4s;
+	}
+	
+
+/* Footer */
+	/* 	Style the footer as a basic legal disclaimer */
+	footer {
+		color: #FFFFFF;
+		background-color: #222222;
+		padding: 0.5em;
+	}
+	
+	footer a {
+		color: #FFFFFF;
+		background-color: #222222;
+		padding: 0.5em;
+	}
+	
+/*	Media breakpoints */
+	
+	
+	@media only screen and (max-width: 1200px) {
+		/*	Few changes necessary on tablets, but container width could do with being allowed to extend to 100% to prevent
+			unnecessary font wrapping making the screen hard to read */
+		main .container {
+			width: 100%;
+		}
+		
+		/*	Callout will also start wrapping after this point, so should switch to percentage-based width */
+		.calloutMainText {
+			width: 100%;
+		}
+	}
+	
+	/*	iPad's screen width is 768px, so switch to mobile mode at 750px */
+	
+	@media only screen and (max-width: 750px) {
+		
+		/* 	Starting at roughly 720px, the navbar at the top of the screen overflows. Solution is to
+			have the navigation buttons center themselves and the name on the left disappear */
+		nav {
+			text-align: left;
+			overflow:hidden;
+		}
+
+		nav .navLinks {
+			display: none;
+		}
+
+		nav p {
+			display: none;
+		}
+		
+		/* At this point, the navigation bar at the top switches to a drop-down menu */
+		
+		nav #navDropMenu {
+			display: block;
+		}
+		
+		nav .mobLink {
+			display: block;
+		}
+		
+		nav:hover,
+		nav:active {
+			height: 27em;
+			transition: 0.3s;
+		}
+		
+		/* 	Container text will need to be resized at various points. Roughly speaking (assuming default browser font size)
+			the following breakpoints correspond to 1250px, 1000px and 770px. At 0.4em, the font on the screen seems to be small
+			enough that it looks correct down to 500px*/
+		
+		.callout {
+			font-size: 0.8em;
+		}
+		
+		.calloutMainText {
+			padding-top: 0;
+		}
+		
+		/* 	In order for the link to align properly with the navbar, there needs to be some spacing above the section */
+	
+		/* 	On small screens, moving the image to a new line improves readaibility substantially */
+		
+		.aboutMeContent img{
+			float: none;
+			display: block;
+			margin: 2em auto;
+		}
+	}
+	
+	@media only screen and (max-width: 420px) {
+		/*	Font needs to become even smaller on extremely small screens */
+		
+		.callout {
+			font-size: 0.6em;
+		}
+		
+		/*	Main section becomes aligned off-centre vertically due to fixed padding at this breakpont. Switch to %-based */
+		section {
+			padding: 0 5%;
+			width: 90%;
+		}
+	}
