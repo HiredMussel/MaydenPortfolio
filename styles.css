@@ -344,6 +344,7 @@
 	
 	.contactContent a {
 		width: 32%;
+		max-width: 100px;
 	}
 	
 	.contactIcon {
