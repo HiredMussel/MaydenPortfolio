@@ -140,6 +140,10 @@
 	nav p {
 		color: #AEAEAE;
 		font-size: 1.8em;
+	}
+	
+	nav h1,
+	nav p {
 		padding: 1em;
 	}
 	
