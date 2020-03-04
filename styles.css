@@ -315,6 +315,10 @@
 		font-size: 1.6em;
 	}
 	
+	.buttonContainer p{
+		margin: 0;
+	}
+	
 	.buttonContainer:hover {
 		border-color: #FFFFFF;
 		background-color: #FFFFFF;
