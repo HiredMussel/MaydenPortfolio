@@ -422,6 +422,7 @@
 		
 		nav .mobLink {
 			display: block;
+			padding: 0 auto;
 		}
 		
 		nav:hover,
